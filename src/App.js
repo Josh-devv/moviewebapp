@@ -10,10 +10,13 @@ import Home from './Pages/Home';
 
 function App(){
     return (
+      <>
+      
       
         <WatchlistProvider>  
           <Router>
-            <Routes>        
+            <Routes>   
+                  
               <Route exact path='/' Component={MovieSection}/>
               <Route path='/movie/:id' Component={MovieDesc}/>
               <Route path='/search/:title' Component={SearchPage}/>        
@@ -21,8 +24,8 @@ function App(){
             </Routes>
           </Router>
         </WatchlistProvider>  
+       </> 
         
-      // <Home />  
            
   )
 }

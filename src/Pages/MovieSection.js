@@ -7,6 +7,7 @@ import Rated from '../components/Rated'
 import UpComing from '../components/UpComing'
 import { Link } from 'react-router-dom'; 
 import { FaSpinner } from 'react-icons/fa';
+import Home from './Home';
 
 export default function MovieSection(){
     
@@ -45,12 +46,8 @@ export default function MovieSection(){
      
     }, []);
 
-    
-  
-   return ( 
-    <body className="body py-2">
-
-        <div className="container-fluid app">
+    /*
+<div className="container-fluid app">
             <h1 className="movie-head">Josh Flix Unchained</h1>
 
             <div className="search">
@@ -60,6 +57,14 @@ export default function MovieSection(){
                 <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}placeholder="Search for something"/>
             </div>
         </div>
+    */
+  
+   return ( 
+    <>
+    <Home />
+    <body className="body py-2">
+
+        
 
          <h5 className="container-fluid genre">Upcoming</h5>
             <div className='container-fluid head-app2'>
@@ -115,5 +120,6 @@ export default function MovieSection(){
 
         <Footer />
     </body>
+    </>
    )
     }
