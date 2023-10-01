@@ -729,17 +729,18 @@ ul li a:hover{
 #sticky{
   position: fixed;
   top: 0;
-  background-color:none;
+  background-color: none;
   display: flex;
   align-items: center;
   height: 70px;
+  justify-content: space-between;
   z-index: 100000000000;
 
 }
 #sticky:first-child{
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  
   color: white;
   flex-wrap: nowrap;
 }
@@ -747,7 +748,6 @@ ul li a:hover{
   font-family: var(--font-raleway);
   background: url('./Assets/last.jpg') no-repeat center center/cover;
   height: 100vh;
- 
   background-size: cover;
   width: 100%;
   color: white
@@ -788,12 +788,24 @@ ul li a:hover{
   max-width: 700px;
 }
 .home-page{
-  z-index: 10000;
   position: relative;
-  top: 25%;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 50px;
   display: flex;
   align-items: center;
+  height: 100%;
+  justify-content: space-between;
+  z-index: 1000;
+  align-items: center;
+}
+.pfpf{
+  width: 65%;
+}
+.pfp{
+  display: flex;
+  justify-content: center;
+  width: 35%;
 }
 .home-page button{
   background-color: rgb(4, 4, 252);
@@ -821,7 +833,63 @@ ul li a:hover{
 }
 
 
-@media screen and (min-width:700px) and (max-width: 760px) {
+
+@media screen and (max-width: 768px) {
+  .home-page{
+    display: flex;
+    flex-direction: column;
+    padding-top: 110px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+  }
+  .pfpf{
+    width: 100%;
+    text-align: center;
+    padding-top: 150px;
+  }
+  .home-page p{
+    width: 85%;
+  }
+  
+}
+
+
+@media screen and (max-width: 767px){
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    padding-top: 70px;
+  }
+  .home-page div{
+    height: 50%;
+  }
+  .home-page h1{
+    font-size: 50px;
+    
+  }
+  .pfpf{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
+  .pfpf p{
+    text-align: center;
+  }
+  .pfp img{
+    width: 250px;
+  }
+
+}
+
+@media screen and (max-width:720px){
   .search{
     display: none;
   }
@@ -832,6 +900,7 @@ ul li a:hover{
   .nav-head{
     padding-left: 10px;
   }
+  
 }
 @media screen and (max-width: 600px) {
   .app {
@@ -841,6 +910,7 @@ ul li a:hover{
   .search {
     padding: 1rem 1.75rem;
     width: 100%;
+    display: none;
   }
 
   .search input {
@@ -855,29 +925,22 @@ ul li a:hover{
     font-size: 25px;
     padding-left: 10px;
   }
-  .search{
-    display: none;
-  }
+  
   .menu{
     display: block;
   }
-  .home-page{
-    
-  }
   .home-banner h1{
     font-size: 50px;
-    width: 90%;
   }
   .home-page p{
     min-width: 0;
     width: 90%;  
   }
-  .home-page{
-    position: absolute;
-    top: 35%;
-    left: 7%;
+  .home-page h1{
+    font-size: 30px;
   }
 }
+
 
 @media screen and (max-width: 400px) {
   .app {
@@ -893,7 +956,30 @@ ul li a:hover{
   }
 
   .movie {
-    width: "100%";
+    width: 100%;
     margin: 1rem;
   }
 }
+
+
+
+
+@media screen and (min-width:280px) and (max-width:400px) {
+  .home-page{
+    
+   
+  }
+  .home-page p{
+    font-size: 10px;
+  }
+  .pfpf h1{
+    font-size: 30px;
+  }
+  .pfpf{
+    padding-top: 80px;
+  }
+  .pfp img{
+    width: 250px;
+  }
+}
+

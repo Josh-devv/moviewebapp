@@ -18,11 +18,11 @@ export default function Navbar(){
 
     return(
         <body className="body-nav">
-            <div className="conta" id="sticky">
+            <div className="" id="sticky">
                 <h2 className="nav-head pl-md-5">Josh Flix</h2>
 
-                <div className="search mr-md-5">
-                    <div className=' pr-1 pt-2'>
+                <div className="search mr-5">
+                    <div className='pr-1 pt-2'>
                         <GoSearch size={17} />
                     </div>
                     <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}placeholder="Search for something"/>
