@@ -6,8 +6,10 @@ import ppp from '../Assets/mob-bg.png'
 export default function Home(){
     return(
         <>
-            <Navbar />
+            
+
             <section className="home-banner">
+            <Navbar />
                <div className="home-page">
                     <div>
                         <h1 className="">Discover free Movies</h1>

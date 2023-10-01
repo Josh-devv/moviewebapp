@@ -1,6 +1,6 @@
 import React from 'react';
 import { useEffect, useState, useLayoutEffect } from 'react';
-import {GoSearch} from 'react-icons/go'
+import { AiOutlineLeft,AiOutlineRight } from "react-icons/ai";
 import Popular from '../components/Popular'
 import Footer from '../components/Footer';
 import Rated from '../components/Rated'
@@ -65,10 +65,17 @@ export default function MovieSection(){
     <body className="body py-2">
 
         
+        <div>
 
-         <h5 className="container-fluid genre">Upcoming</h5>
+        </div>
+        <h5 className="container-fluid genre pl-4 pt-4 pb-1">Upcoming movies</h5>
+        
+        <div className='db'>
+        <AiOutlineLeft className="ar left"/>
+            <AiOutlineRight className="ar right"/>
+           </div>
             <div className='container-fluid head-app2'>
-                
+               
                     {
                         loading ? (
                             <div className=" spins w-100">
@@ -77,7 +84,7 @@ export default function MovieSection(){
                             </div>
                         ) : (
                             <div className="app2">
-                             <UpComing upComingMovies={upComingMovies} loading={loading}/> 
+                                <UpComing upComingMovies={upComingMovies} loading={loading}/> 
                              </div>
                         )
                     }
@@ -85,7 +92,11 @@ export default function MovieSection(){
                 
             </div>   
 
-         <h5 className="container-fluid genre">Popular Movies</h5>
+         <h5 className="container-fluid genre pl-4 pt-4">Popular Movies</h5>
+         <div className='db'>
+            <AiOutlineLeft className="ar left"/>
+            <AiOutlineRight className="ar right"/>
+           </div>
             <div className='container-fluid head-app2'>
                     {
                         loading ? (
@@ -101,7 +112,12 @@ export default function MovieSection(){
                     }
             </div>
 
-         <h5 className="container-fluid genre">Top Rated Movies</h5>
+         <h5 className="container-fluid genre pl-4 pt-4">Top Rated Movies</h5>
+           <div className='db'>
+            <AiOutlineLeft className="ar left"/>
+            <AiOutlineRight className="ar right"/>
+           </div>
+           
             <div className='container-fluid head-app2'>
                     {
                         loading ? (

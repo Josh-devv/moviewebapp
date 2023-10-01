@@ -7,9 +7,18 @@ export default function Navbar(){
 
     const [searchQuery, setSearchQuery] = useState('')
 
+    window.onscroll = () => {
+            let blur = document.querySelector('.blur')
+        if (window.scrollY >= 50) {
+            blur.classList.add('backdrop')
+        } else{
+            blur.classList.remove('backdrop')
+        }
+    }
+
     return(
         <body className="body-nav">
-            <div className="container-fluid nav-app pt-3 pb-2" id="sticky">
+            <div className="conta" id="sticky">
                 <h2 className="nav-head pl-md-5">Josh Flix</h2>
 
                 <div className="search mr-md-5">
@@ -21,6 +30,7 @@ export default function Navbar(){
                 <div className="menu">
                     <AiOutlineBars  size={25}/>
                 </div>
+                <div className="blur backdrop"></div>
             </div>
             
         </body>
