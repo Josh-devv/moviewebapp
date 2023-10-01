@@ -28,7 +28,7 @@ export default function Navbar(){
                     <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}placeholder="Search for something"/>
                 </div>
                 <div className="menu">
-                    <AiOutlineBars  size={25}/>
+                    <AiOutlineBars  size={28}/>
                 </div>
                 <div className="blur backdrop"></div>
             </div>

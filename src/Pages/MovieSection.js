@@ -70,10 +70,7 @@ export default function MovieSection(){
         </div>
         <h5 className="container-fluid genre pl-4 pt-4 pb-1">Upcoming movies</h5>
         
-        <div className='db'>
-        <AiOutlineLeft className="ar left"/>
-            <AiOutlineRight className="ar right"/>
-           </div>
+        
             <div className='container-fluid head-app2'>
                
                     {
@@ -84,6 +81,7 @@ export default function MovieSection(){
                             </div>
                         ) : (
                             <div className="app2">
+                                
                                 <UpComing upComingMovies={upComingMovies} loading={loading}/> 
                              </div>
                         )
@@ -93,10 +91,6 @@ export default function MovieSection(){
             </div>   
 
          <h5 className="container-fluid genre pl-4 pt-4">Popular Movies</h5>
-         <div className='db'>
-            <AiOutlineLeft className="ar left"/>
-            <AiOutlineRight className="ar right"/>
-           </div>
             <div className='container-fluid head-app2'>
                     {
                         loading ? (
@@ -106,6 +100,7 @@ export default function MovieSection(){
                             </div>
                         ) : (
                             <div className="app2">
+                                
                              <Popular popularMovies={popularMovies} loading={loading}/> 
                              </div>
                         )
@@ -113,10 +108,7 @@ export default function MovieSection(){
             </div>
 
          <h5 className="container-fluid genre pl-4 pt-4">Top Rated Movies</h5>
-           <div className='db'>
-            <AiOutlineLeft className="ar left"/>
-            <AiOutlineRight className="ar right"/>
-           </div>
+          
            
             <div className='container-fluid head-app2'>
                     {
@@ -127,6 +119,7 @@ export default function MovieSection(){
                             </div>
                         ) : (
                             <div className="app2">
+                               
                              <Rated ratedMovies={ratedMovies} loading={loading}/> 
                              </div>
                         )

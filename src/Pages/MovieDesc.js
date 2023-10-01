@@ -119,7 +119,7 @@ console.log(mdetails);
                        
                      
                        
-                          
+                           
                     </span> 
                 
                     <span className="overview">{mdetails.overview}</span>
