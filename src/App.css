@@ -749,7 +749,7 @@ ul li a:hover{
 .home-banner{
   font-family: var(--font-raleway);
   background: url('./Assets/last.jpg') no-repeat center center/cover;
-  height: 100vh;
+  height: 90vh;
   background-size: cover;
   width: 100%;
   color: white
