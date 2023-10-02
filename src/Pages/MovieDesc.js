@@ -75,7 +75,11 @@ console.log(mdetails);
         }, [loc]);//by passing in the useLocation hook
   
      //console.log(watchlist);
-  
+  /*
+<Link to="/">
+                                <button className="desc-button1 " ><AiOutlineHome size={35} className="home" /></button>
+                            </Link> 
+  */
     return(
 
         <>
@@ -134,16 +138,16 @@ console.log(mdetails);
                         
                             <span className="overview">{mdetails.overview}</span>
                             <span className="tagline mt-3"><i>"{mdetails.tagline}"</i></span>
+                            
+
+                            <div className="btns d-flex">
                             <button className="desc-button"> Watch Now</button>
+                            <button className="desc-button1" onClick={handleAddToWatchlist}><HiOutlinePlus />Add to WatchList</button>
+                            
+                    </div>
                     </div>            
                     
-                    <div className="watchlist d-none">
-                        
-                        <button className="text" onClick={handleAddToWatchlist}><HiOutlinePlus />Add WatchList</button>
-                        <Link to="/">
-                            <button className="ml-2" ><AiOutlineHome size={25} className="home" /></button>
-                        </Link> 
-                    </div>
+                    
                 </div>
 
                 <div>

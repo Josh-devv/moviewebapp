@@ -554,7 +554,7 @@ html{
 .desc-info{
   z-index: 10000;
     width: 100%;
-    top: 15%;
+    top: 11%;
     position: absolute;
     display: flex;
     
@@ -576,14 +576,24 @@ html{
 .home{
   color: white;
   font-weight: bold;
+  background-color: black;
 }
 .watchlist{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.btns{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
 .text{
   color: white;
+  background-color: black;
+  padding: 0;
+  
 
 }
 .descc{
@@ -628,16 +638,32 @@ html{
   font-weight: 400;
   
 }
+.desc-button1{
+  margin-top: 40px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  margin-left: 45px;
+  color: black;
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  width: 20%;
+  color: color;
+  font-size: 15px;
+  font-weight: 400;
+  
+}
 .tagline{
   font-size: 15px;
   font-weight: lighter;
 }
 .overview{
-  font-size: 15px;
+  font-size: 17px;
   font-weight: lighter;
   display: grid;
   width: 100%;
-  max-width: 500px; /* Set a maximum width for the container */
+   /* Set a maximum width for the container */
   /*display: -webkit-box;
   -webkit-line-clamp: 3;  Limit the content to 2 lines 
   -webkit-box-orient: vertical;*/
@@ -903,19 +929,33 @@ ul li a:hover{
     height: 40vh;
   }
   .desc-carou{
-    width: 220px;
+    width: 320px;
     display: block;
     overflow: hidden;
     border-radius: 12px;
     border: none;
-    padding-top: 60px;
+    
     padding-left: 45px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
   }
-
+  .descc button{
+    width: 20%;
+  }
+  .descc h1{
+    font-size: 70px;
+  }
+  .descc span{
+    font-size: 20px;
+  }
   .desc-carou  img {
     width: 100%;
+  }
+  .descc{
+    width: 100%;
+  }
+  .overview{
+    width: 95%;
   }
   
 }
@@ -954,9 +994,23 @@ ul li a:hover{
    width: 100%;
    min-width: 0; 
   }
+  .desc-carou{
+    width: 280px;
+  }
+  .descc span{
+    font-size: 17px;
+  }
+  .desc-carou{
+    padding-top: 40px;    
+  }
   
 }
 
+@media screen and (max-width:601px) {
+  .desc-carou{
+    width: 200px;
+  }
+}
 @media screen and (max-width:600px){
   .nav-head{
     font-size: 25px;
@@ -991,12 +1045,12 @@ ul li a:hover{
     font-size: 15px;
   }
   .desc-carou{
-    width: 150px;
+    width: 180px;
     display: block;
     overflow: hidden;
     border-radius: 12px;
     border: none;
-    padding-top: 2px;
+    padding-top: 70px;
     padding-left: 4px;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
@@ -1011,25 +1065,38 @@ ul li a:hover{
     width: 100%;
     
   }
+  .descc span{
+    font-size: 13px;
+  }
   .overview{
     width: 100%;
-    font-size: 12px;
+    font-size: 8px;
   }
   .desc-info {
     
-    width: 100%;
+    width: 100%; 
 }
 .descc{
   width: 100%;
 }
 .descc button{
-  width: 80%;
-  margin: 0;
+  width: 40%;
+  margin-left: 5px;
+  font-size: 10px;
   margin-top: 15px;
 }
-
 }
 
+@media screen and (max-width:380px){
+  .descc span{
+    font-size: 10px;
+  }
+  .desc-carou{
+    width: 130px;
+    padding-top: 30px;
+  }
+ 
+}
 @media screen and (max-height:600px){
   .home-banner img{
     display: none;
