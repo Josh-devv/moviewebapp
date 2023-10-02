@@ -44,6 +44,7 @@
     rgb(253, 253, 252) 0%,
     rgba(122, 79, 44, 0)
   );
+  padding-left: 50px;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -201,6 +202,10 @@
 }
 
 .carou-w div:nth-of-type(2) {
+  width: 100%;
+  height: 100%;
+}
+.desc-carou div:nth-of-type(2) {
   width: 100%;
   height: 100%;
 }
@@ -444,7 +449,7 @@ a{
 /*Movie Description*/
 .desc-body{
     font-family: var(--font-raleway);
-    background-color: #212426;
+    background-color: black;
     height: 100%;
    position: relative;
    color: white;
@@ -507,6 +512,7 @@ html{
   justify-content: center;
   align-items: center;
   height: 100vh;
+
   width: 100%;
   position: relative;
   
@@ -541,17 +547,20 @@ html{
 }
 .desc-img img{  
   width: 100%;
+  height: 100vh;
+  background-size: cover;
 
 }
 .desc-info{
   z-index: 10000;
     width: 100%;
-    top: 10%;
+    top: 15%;
     position: absolute;
     display: flex;
+    
     justify-content:flex-start;
     align-items: last baseline;
- 
+  
 }
 .watchlist button{
   border-radius: 5px;
@@ -627,7 +636,8 @@ html{
   font-size: 15px;
   font-weight: lighter;
   display: grid;
-  width: 800px; /* Set a maximum width for the container */
+  width: 100%;
+  max-width: 500px; /* Set a maximum width for the container */
   /*display: -webkit-box;
   -webkit-line-clamp: 3;  Limit the content to 2 lines 
   -webkit-box-orient: vertical;*/
@@ -749,7 +759,7 @@ ul li a:hover{
 .home-banner{
   font-family: var(--font-raleway);
   background: url('./Assets/last.jpg') no-repeat center center/cover;
-  height: 90vh;
+  height: 100vh;
   background-size: cover;
   width: 100%;
   color: white
@@ -833,6 +843,9 @@ ul li a:hover{
 .menu{
   display: none;
 }
+.desc-carou{
+  display: none;
+}
 
 @media screen and (max-width:1023px) {
   .home-page h1{
@@ -880,13 +893,31 @@ ul li a:hover{
   .home-page img{
     width: 350px;
   }
-  .pfp img{
-    
-    
+  .desc-img{
+    display: block; 
   }
-  .home-page p{
-    
+  .desc-img img{
+    height: 40vh;
   }
+  .desc-img::after{
+    height: 40vh;
+  }
+  .desc-carou{
+    width: 220px;
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    border: none;
+    padding-top: 60px;
+    padding-left: 45px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  }
+
+  .desc-carou  img {
+    width: 100%;
+  }
+  
 }
 
 @media screen and (max-width:768px) {
@@ -925,6 +956,7 @@ ul li a:hover{
   }
   
 }
+
 @media screen and (max-width:600px){
   .nav-head{
     font-size: 25px;
@@ -958,11 +990,46 @@ ul li a:hover{
   .genre{
     font-size: 15px;
   }
+  .desc-carou{
+    width: 150px;
+    display: block;
+    overflow: hidden;
+    border-radius: 12px;
+    border: none;
+    padding-top: 2px;
+    padding-left: 4px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  }
+  .descc h1, p, span{
+    padding-left: 4px;
+  }
+  .descc h1{
+    font-size: 35px;
+  }
+  .descc p{
+    width: 100%;
+    
+  }
+  .overview{
+    width: 100%;
+    font-size: 12px;
+  }
+  .desc-info {
+    
+    width: 100%;
 }
-@media screen and (min-hei:600px) and (max-height:900px){
-  
+.descc{
+  width: 100%;
+}
+.descc button{
+  width: 80%;
+  margin: 0;
+  margin-top: 15px;
+}
 
 }
+
 @media screen and (max-height:600px){
   .home-banner img{
     display: none;
@@ -987,6 +1054,11 @@ ul li a:hover{
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
+}
+.home-banner{
+
+  height: 90vh;
+ 
 }
 }
 @media screen and (max-width:280px){

@@ -100,6 +100,11 @@ console.log(mdetails);
              
                 <div className="container-fluid desc-info">  
                     <div className="descc">
+                        
+                            <div className="desc-carou color-white" >                                                    
+                                <img src={`https://image.tmdb.org/t/p/w500${mdetails.poster_path}`} alt="" />
+                            </div> 
+                        
                         <h1 className="desc-name">{mdetails.title}</h1>
                             <span>
 
@@ -132,7 +137,7 @@ console.log(mdetails);
                             <button className="desc-button"> Watch Now</button>
                     </div>            
                     
-                    <div className="watchlist d-flex">
+                    <div className="watchlist d-none">
                         
                         <button className="text" onClick={handleAddToWatchlist}><HiOutlinePlus />Add WatchList</button>
                         <Link to="/">
