@@ -15,7 +15,7 @@ export default function Home(){
                         <button>Explore</button>
                     </div>
                     
-                    <div className="pfp p-0">
+                    <div className="pfp">
                         <img src={ppp} className="" />
                     </div>
                </div>

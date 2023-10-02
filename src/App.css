@@ -785,9 +785,9 @@ ul li a:hover{
   width: 50%;
 }
 .home-banner h1{
-  font-size: 80px;
+  font-size: 90px;
   font-weight: bold;
-  max-width: 700px;
+  width: 80%;
 }
 .home-page{
   position: relative;
@@ -834,18 +834,197 @@ ul li a:hover{
   display: none;
 }
 
-
-@media screen and (min-width:769px) and (max-width:1023px){
-  .home-page {
+@media screen and (max-width:1023px) {
+  .home-page h1{
+    
+  }
+  .nav-head{
+    padding-left: 35px;
+    font-size: 35px;
+  }
+  .home-page{
     flex-direction: column;
-    padding-top: 110px;
     justify-content: space-between;
+    
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+  }
+  .pfpf{
+   text-align: center;
+    padding-top: 200px;
+    width: 100%;
+    margin-top: 100px;
+  }
+  .pfpf button{
+    margin: 0 auto;
+    font-size: 25px;
+    width: 350px;
+  }
+  .home-page p{
+    min-width: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+  }
+  .home-banner h1{
+    
+    text-align: center;
+  }
+  .pfpf h1{
+    width: 100%;
+  
+    font-size: 90px;
+    text-align: center;
+  }
+  .home-page img{
+    width: 350px;
+  }
+  .pfp img{
+    
+    
+  }
+  .home-page p{
+    
+  }
+}
 
+@media screen and (max-width:768px) {
+  .home-page{
+    flex-direction: column;
+    
+    justify-content: center;
+  }
+  .nav-head{
+    padding-left: 25px;
+    font-size: 35px;
+  }
+  
+  .search{
+    display: none;
+  }
+  .menu{
+    display: block;
+    padding-right: 30px;
   }
   .pfpf{
     width: 100%;
-    padding-top: 200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
   }
+  .pfpf h1{
+    font-size: 60px;
+  }
+  .pfp{
+    display: none;
+  }
+  .pfpf p{
+   width: 100%;
+   min-width: 0; 
+  }
+  
+}
+@media screen and (max-width:600px){
+  .nav-head{
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  .menu{
+    
+  }
+  .home-page{
+    height: 100vh;
+  }
+  .pfpf{
+    
+  }
+  .pfpf p{
+    font-size: 15px;
+  }
+  .home-page button{
+    width: 150px;
+    width: 95%;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .pfpf h1{
+    
+    font-size: 35px;
+  }
+  .home-page{
+    padding: 0 10px;
+  }
+  .genre{
+    font-size: 15px;
+  }
+}
+@media screen and (min-hei:600px) and (max-height:900px){
+  
+
+}
+@media screen and (max-height:600px){
+  .home-banner img{
+    display: none;
+  }
+ 
+  .pfpf{
+    padding-top: 50px;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;  
+    flex-direction: column;
+    justify-content: center;
+}
+.pfpf h1{
+  font-size: 40px;
+}
+.pfpf p {
+  padding: 0;
+}
+.pfpf button{
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+}
+@media screen and (max-width:280px){
+  .pfp{
+    display: none;
+  }
+}
+/*
+@media screen and (min-width:769px) and (max-width:1023px){
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: ;
+  }
+  .pfpf{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding-top: 20px;
+  }
+  .pfpf h1{
+    text-align: center;
+    font-size: 70px;
+    width: 100%;
+  }
+  .pfpf p{
+    width: 90%;
+    text-align: center;  
+  }
+  .pfpf button{
+    margin: 0 auto;
+  }
+  
 }
 @media screen and (max-width: 768px) {
   .home-page{
@@ -859,15 +1038,21 @@ ul li a:hover{
   .pfpf{
     width: 100%;
     text-align: center;
-    padding-top: 150px;
+    padding-top: 120px;
   }
+ 
   .home-page p{
     
     
   }
   .pfpf p{
-    width: 100%;
+    width: 90%;
     text-align: center;
+  }
+  .pfpf h1{
+    font-size: ;
+    text-align: center;
+    width: 96%;
   }
   
 }
@@ -880,13 +1065,14 @@ ul li a:hover{
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    padding-top: 70px;
+    padding-top: 10px;
   }
+  
   .home-page div{
     height: 50%;
   }
   .home-page h1{
-    font-size: 80px;
+    font-size: 55px;
     
   }
   .pfpf{
@@ -1019,6 +1205,10 @@ ul li a:hover{
   .pfp img{
     width: 250px;
   }
+  .desc-img img{
+    height: 100vh;
+    width: 50%;
+  }
   
 }
-
+*/

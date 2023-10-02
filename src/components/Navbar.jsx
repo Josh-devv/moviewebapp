@@ -19,7 +19,7 @@ export default function Navbar(){
     return(
         <body className="body-nav">
             <div className="" id="sticky">
-                <h2 className="nav-head pl-md-5">Josh Flix</h2>
+                <h2 className="nav-head">Josh Flix</h2>
 
                 <div className="search mr-5">
                     <div className='pr-1 pt-2'>

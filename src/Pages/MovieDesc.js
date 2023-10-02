@@ -7,6 +7,8 @@ import { IoMdStar } from "react-icons/io";
 import { HiOutlinePlus } from 'react-icons/hi'
 import { AiOutlineHome } from 'react-icons/ai'
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+
 
 export default function MovieDesc(){
 
@@ -75,148 +77,153 @@ console.log(mdetails);
      //console.log(watchlist);
   
     return(
-    <section className=" desc-body" >
 
-        <div className="head-desc">
-            <div className="desc-img">
-                {
-                    mdetails.backdrop_path ? (
-                    <img src={`https://image.tmdb.org/t/p/original${mdetails.backdrop_path}`} width={100}
-                    className="iii" />
-                ): (
-                    <img src={`https://image.tmdb.org/t/p/original${mdetails.poster_path}`} width={100}
-                    className="iii" />
-                )
-            
-                }
-            </div>
-            <div className="dark"></div>
-        </div>
-             
-        <div className="container-fluid desc-info">  
-            <div className="descc">
-                <h1 className="desc-name">{mdetails.title}</h1>
-                    <span>
-
-                        <small className="rating ml-2 mr-3">
-                                {typeof mdetails.vote_average === 'number' ? mdetails.vote_average.toFixed(1) : 'N/A'}
-                        </small> 
-                        |
-                        
-                        
+        <>
+        <Navbar />
+          <section className=" desc-body" >
+        
+                <div className="head-desc">
+                    <div className="desc-img">
                         {
-                            mdetails.release_date && mdetails.release_date.split("-")[0] 
-                                ? (
-                                    <small className="year ml-2 mr-2">{mdetails.release_date.split("-")[0]}</small>
-                                ) : (
-                                    <small className="">Release date not available</small>
-                                )
+                            mdetails.backdrop_path ? (
+                            <img src={`https://image.tmdb.org/t/p/original${mdetails.backdrop_path}`} width={100}
+                            className="iii" />
+                        ): (
+                            <img src={`https://image.tmdb.org/t/p/original${mdetails.poster_path}`} width={100}
+                            className="iii" />
+                        )
+                    
                         }
-                        |
-                        <small className="mins ml-2">
-                            {mdetails.runtime}mins
-                        </small>
-                       
-                     
-                       
-                           
-                    </span> 
-                
-                    <span className="overview">{mdetails.overview}</span>
-                    <span className="tagline mt-3"><i>"{mdetails.tagline}"</i></span>
-                    <button className="desc-button"> Watch Now</button>
-            </div>            
-            
-            <div className="watchlist d-flex">
-                
-                <button className="text" onClick={handleAddToWatchlist}><HiOutlinePlus />Add WatchList</button>
-                <Link to="/">
-                    <button className="ml-2" ><AiOutlineHome size={25} className="home" /></button>
-                </Link> 
-            </div>
-        </div>
+                    </div>
+                    <div className="dark"></div>
+                </div>
+             
+                <div className="container-fluid desc-info">  
+                    <div className="descc">
+                        <h1 className="desc-name">{mdetails.title}</h1>
+                            <span>
 
-        <div>
-            <h5 className="container-fluid genre pt-5">Josh's WatchList</h5>
-                <div className="head-app2">
-                    <div className="app2 container-fluid" >
-                        <div>
-                        <div className="carou-add color-white" onClick={handleAddToWatchlist}>                                                    
-                                <HiOutlinePlus size={100} className="add"/>
-                               
-                        </div> 
-                            <div className="" >
-                                <span className=" pl-3">Click this to add</span>
+                                <small className="rating ml-2 mr-3">
+                                        {typeof mdetails.vote_average === 'number' ? mdetails.vote_average.toFixed(1) : 'N/A'}
+                                </small> 
+                                |
+                                
+                                
+                                {
+                                    mdetails.release_date && mdetails.release_date.split("-")[0] 
+                                        ? (
+                                            <small className="year ml-2 mr-2">{mdetails.release_date.split("-")[0]}</small>
+                                        ) : (
+                                            <small className="">Release date not available</small>
+                                        )
+                                }
+                                |
+                                <small className="mins ml-2">
+                                    {mdetails.runtime}mins
+                                </small>
+                            
+                            
+                            
+                                
+                            </span> 
+                        
+                            <span className="overview">{mdetails.overview}</span>
+                            <span className="tagline mt-3"><i>"{mdetails.tagline}"</i></span>
+                            <button className="desc-button"> Watch Now</button>
+                    </div>            
+                    
+                    <div className="watchlist d-flex">
+                        
+                        <button className="text" onClick={handleAddToWatchlist}><HiOutlinePlus />Add WatchList</button>
+                        <Link to="/">
+                            <button className="ml-2" ><AiOutlineHome size={25} className="home" /></button>
+                        </Link> 
+                    </div>
+                </div>
+
+                <div>
+                    <h5 className="container-fluid genre pt-5">Josh's WatchList</h5>
+                        <div className="head-app2">
+                            <div className="app2 container-fluid" >
+                                <div>
+                                <div className="carou-add color-white" onClick={handleAddToWatchlist}>                                                    
+                                        <HiOutlinePlus size={100} className="add"/>
+                                    
+                                </div> 
+                                    <div className="" >
+                                        <span className=" pl-3">Click this to add</span>
+                                    </div>
+                                </div>
+
+                                {
+                                    watchlist.map((week)=>(
+                                        <Link to={{pathname: `/movie/${week.id}`, state:{movie: week}}} key={week.id}>    
+                                            <div className="carou-w color-white">                                                    
+                                                <img src={`https://image.tmdb.org/t/p/w500${week.poster_path}`} alt="" />
+                                            </div> 
+                    
+                                            <div className="head-info" >
+                                                <span className="info pl-3">{week.title}</span>
+                                                    <div className='container-fluid ratings d-flex'>
+                                                        <small className="d-flex justify-content-center align-items-center">
+                                                            <IoMdStar size={20} color="yellow" />{week.vote_average}
+                                                        </small>
+                                                        {
+                                                            week.release_date && week.release_date.split("-")[0]
+                                                            ? (
+                                                            <small>{week.release_date.split("-")[0]}</small>
+                                                            ) : (
+                                                            <small className="d-none">Release date not available</small>
+                                                        )}
+                                                    </div>                                        
+                                            </div>
+                                    </Link>
+                                    ))
+                                }
                             </div>
                         </div>
-
-                        {
-                            watchlist.map((week)=>(
-                                <Link to={{pathname: `/movie/${week.id}`, state:{movie: week}}} key={week.id}>    
-                                    <div className="carou-w color-white">                                                    
-                                        <img src={`https://image.tmdb.org/t/p/w500${week.poster_path}`} alt="" />
-                                    </div> 
-            
-                                    <div className="head-info" >
-                                         <span className="info pl-3">{week.title}</span>
-                                            <div className='container-fluid ratings d-flex'>
-                                                <small className="d-flex justify-content-center align-items-center">
-                                                    <IoMdStar size={20} color="yellow" />{week.vote_average}
-                                                </small>
-                                                {
-                                                    week.release_date && week.release_date.split("-")[0]
-                                                     ? (
-                                                    <small>{week.release_date.split("-")[0]}</small>
-                                                    ) : (
-                                                    <small className="d-none">Release date not available</small>
-                                                )}
-                                            </div>                                        
-                                    </div>
-                              </Link>
-                            ))
-                        }
                     </div>
-                </div>
-            </div>
 
-        <div>
-            <h5 className="container-fluid genre pt-5">Weekly Rated Movies</h5>
-                <div className="head-app2">
-                    <div className="app2 container-fluid" >
-                        {
-                            weekly.map((week)=>(
-                                <Link to={{pathname: `/movie/${week.id}`, state:{movie: week}}} key={week.id}>    
-                                    <div className="carou-w color-white">                                                    
-                                        <img src={`https://image.tmdb.org/t/p/w500${week.poster_path}`} alt="" />
-                                    </div> 
-            
-                                    <div className="head-info" >
-                                         <span className="info pl-3">{week.title}</span>
-                                            <div className='container-fluid ratings d-flex'>
-                                                <small className="d-flex justify-content-center align-items-center">
-                                                    <IoMdStar size={20} color="yellow" />{week.vote_average}
-                                                </small>
-                                                {
-                                                    week.release_date && week.release_date.split("-")[0]
-                                                     ? (
-                                                    <small>{week.release_date.split("-")[0]}</small>
-                                                    ) : (
-                                                    <small className="d-none">Release date not available</small>
-                                                )}
+                <div>
+                    <h5 className="container-fluid genre pt-5">Weekly Rated Movies</h5>
+                        <div className="head-app2">
+                            <div className="app2 container-fluid" >
+                                {
+                                    weekly.map((week)=>(
+                                        <Link to={{pathname: `/movie/${week.id}`, state:{movie: week}}} key={week.id}>    
+                                            <div className="carou-w color-white">                                                    
+                                                <img src={`https://image.tmdb.org/t/p/w500${week.poster_path}`} alt="" />
+                                            </div> 
+                    
+                                            <div className="head-info" >
+                                                <span className="info pl-3">{week.title}</span>
+                                                    <div className='container-fluid ratings d-flex'>
+                                                        <small className="d-flex justify-content-center align-items-center">
+                                                            <IoMdStar size={20} color="yellow" />{week.vote_average}
+                                                        </small>
+                                                        {
+                                                            week.release_date && week.release_date.split("-")[0]
+                                                            ? (
+                                                            <small>{week.release_date.split("-")[0]}</small>
+                                                            ) : (
+                                                            <small className="d-none">Release date not available</small>
+                                                        )}
+                                                    </div>
+                                            
+                                                
+                                                
                                             </div>
-                                       
-                                        
-                                        
-                                    </div>
-                              </Link>
-                            ))
-                        }
-                    </div>
+                                    </Link>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    
                 </div>
-               
-        </div>
 
-        <Footer />
+                <Footer />
     </section>
+        </>
+  
     )
 }
