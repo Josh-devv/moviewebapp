@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { IoMdStar } from 'react-icons/io'
 import { FaSpinner } from 'react-icons/fa';
+//import {Swiper, SwiperSlide} from 'swiper/swiper-react.mjs'
 
 export default function Popular({ popularMovies }) {
 
@@ -10,9 +11,10 @@ export default function Popular({ popularMovies }) {
 
    return(
     <>
+    
       { 
         popularMovies.map((mov)=>(
-          <Link to={{pathname: `/movie/${mov.id}`, state:{movie: mov}}} key={mov.id}>   
+          <Link to={{pathname: `home/movie/${mov.id}`, state:{movie: mov}}} key={mov.id}>   
               {
                   loading ? (
                       <FaSpinner />                    
@@ -33,5 +35,7 @@ export default function Popular({ popularMovies }) {
       )}
         </Link>
       ))}
+
+      
   </>
     )};

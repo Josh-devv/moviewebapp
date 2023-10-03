@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState, useLayoutEffect } from 'react';
 import { AiOutlineLeft,AiOutlineRight } from "react-icons/ai";
+import swiper from 'swiper'
 import Popular from '../components/Popular'
 import Footer from '../components/Footer';
 import Rated from '../components/Rated'
@@ -8,7 +9,7 @@ import UpComing from '../components/UpComing'
 import { Link } from 'react-router-dom'; 
 import { FaSpinner } from 'react-icons/fa';
 import Home from './Home';
-
+//gpgus
 export default function MovieSection(){
     
     const [ratedMovies, setRatedMovies] = useState([]);
@@ -45,6 +46,7 @@ export default function MovieSection(){
             .then(json=> setRatedMovies(json.results))
      
     }, []);
+
 
     /*
 <div className="container-fluid app">
@@ -100,8 +102,7 @@ export default function MovieSection(){
                             </div>
                         ) : (
                             <div className="app2">
-                                
-                             <Popular popularMovies={popularMovies} loading={loading}/> 
+                                <Popular popularMovies={popularMovies} loading={loading}/> 
                              </div>
                         )
                     }

@@ -156,7 +156,7 @@ console.log(mdetails);
                             <div className="app2 container-fluid" >
                                 <div>
                                 <div className="carou-add color-white" onClick={handleAddToWatchlist}>                                                    
-                                        <HiOutlinePlus size={100} className="add"/>
+                                        
                                     
                                 </div> 
                                     <div className="" >

@@ -17,9 +17,9 @@ function App(){
           <Router>
             <Routes>   
                   
-              <Route exact path='/' Component={MovieSection}/>
-              <Route path='/movie/:id' Component={MovieDesc}/>
-              <Route path='/search/:title' Component={SearchPage}/>        
+              <Route exact path='/home' Component={MovieSection}/>
+              <Route path='home/movie/:id' Component={MovieDesc}/>
+              <Route path='home/search/:title' Component={SearchPage}/>        
               
             </Routes>
           </Router>

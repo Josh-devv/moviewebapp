@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import { FaSpinner } from "react-icons/fa";
+import Navbar from "../components/Navbar";
 
 const API_URL = 'https://api.themoviedb.org/3/search/movie?api_key=543c959c84a2edaf19d168f7a042f6eb';
 
@@ -38,7 +39,8 @@ export default function SearchPage() {
 
   return (
     <div className="body">
-        <h3 className="container-fluid pt-3">Movies Labeled "{title}"...</h3>
+        <Navbar />
+        <h3 className="label">Movies Labeled "{title}"...</h3>
         <div className='container-fluid head-app2'>
             
         

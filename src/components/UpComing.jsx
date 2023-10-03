@@ -5,13 +5,15 @@ import { Link } from "react-router-dom";
 
 export default function upComing({ upComingMovies, loading }){
     //console.log(loadinng);
+
+    
+   
+    
     return (
-        <div className="up"> 
-            <div className="arr">  
-             
+       <>
                 { 
                     upComingMovies.map((mov)=>(
-                        <Link to={{pathname: `/movie/${mov.id}`}} key={mov.id}>  
+                        <Link to={{pathname: `home/movie/${mov.id}`}} key={mov.id}>  
                             
                             <div className="carou-w color-white">                                                    
                                 <img src={`https://image.tmdb.org/t/p/w500${mov.poster_path}`} alt="" />
@@ -26,8 +28,7 @@ export default function upComing({ upComingMovies, loading }){
 
                         </Link>
                 ))}    
-            </div>
-        </div>
+           </>
             
-            )
-        }
+            )}
+        

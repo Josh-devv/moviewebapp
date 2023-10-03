@@ -872,14 +872,47 @@ ul li a:hover{
 .desc-carou{
   display: none;
 }
+.types{
+  width: 100%;
+  display: flex;
+}
+.label{
+  padding-top: 80px;
+  padding-left: 20px;
+}
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
 
-@media screen and (max-width:1023px) {
-  .home-page h1{
+.slide {
+  flex: 0 0 100%;
+  margin-right: 10px; /* Add some margin between slides */
+}
+
+
+.menu-bar{
+  display: none;
+  
+}
+
+@media screen and (min-width:769px) {
+  .types{
+    display: flex;
     
   }
+  .types h5{
+    font-size: 20px;
+  }
+  .search{
+    display: flex;
+  }
+}
+@media screen and (max-width:1023px) {
+ 
   .nav-head{
     padding-left: 35px;
-    font-size: 35px;
+    font-size: 30px;
   }
   .home-page{
     flex-direction: column;
@@ -903,7 +936,7 @@ ul li a:hover{
   .home-page p{
     min-width: 0;
     text-align: center;
-    width: 100%;
+    width: 95%;
     font-size: 25px;
   }
   .home-banner h1{
@@ -966,6 +999,12 @@ ul li a:hover{
     
     justify-content: center;
   }
+  .types{
+    display: none;
+  }
+  .label{
+    font-size: 20px;
+  }
   .nav-head{
     padding-left: 25px;
     font-size: 35px;
@@ -991,7 +1030,9 @@ ul li a:hover{
     display: none;
   }
   .pfpf p{
+    text-align: center;
    width: 100%;
+
    min-width: 0; 
   }
   .desc-carou{
@@ -1000,8 +1041,66 @@ ul li a:hover{
   .descc span{
     font-size: 17px;
   }
-  .desc-carou{
-     
+  .menu-bar{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+    padding-top: ;
+    background-color: black;
+    width: 100%;
+    z-index: 10000;
+    padding-top: 70px;
+    
+    height: 100vh;
+  }
+
+  .search-div {
+    width: 100%;
+    display: flex;
+    
+    height: 35px;
+    padding: 0px;
+    
+  
+  }
+  .search2{
+    border-radius: 5px;
+    margin-left: calc(100% - 60% - 20px);
+    -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+    box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+    width: 60%;
+    display: flex;justify-content: center;
+    background-color: white;
+    height: 35px;
+  }
+  
+  .search2 input {
+    flex: 1;
+    border: none;
+    font-size: 1rem;
+    font-family: var(--font-raleway);
+    font-weight: 500;
+    width: 100%;
+    outline: none;
+    color: #a1a1a1;
+    
+  }
+  .types2 h6{
+    font-size: 30px;
+    float: right;
+    display: flex;
+    justify-content: end;
+  }
+  .types2{
+    position: relative;
+    align-items: center;
+    height: 40vh;
+    
+    display: grid;
+    row-gap: 0px;
+    width: 100%;
   }
   
 }
@@ -1091,11 +1190,19 @@ ul li a:hover{
   .descc span{
     font-size: 10px;
   }
+  .label{
+    font-size: 15px;
+  }
   .desc-carou{
     width: 130px;
     
   }
- 
+  .search2 input{
+    font-size: 12px;
+  }
+  .types2 h6{
+    font-size: 20px;
+  }
 }
 @media screen and (max-height:600px){
   .home-banner img{
