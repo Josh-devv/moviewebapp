@@ -147,7 +147,9 @@ console.log(mdetails);
                             </div>
                 </div>      
                 
-                <div className="gen">
+                    
+                </div>
+<div className="gen">
                     <h5 className="genre">My WatchList</h5>
                         <div className="head-app2">
                             <div className="app2" >
@@ -188,9 +190,7 @@ console.log(mdetails);
                                 }
                             </div>
                         </div>
-                    </div>      
-                </div>
-
+                    </div>  
                
 
                 <div>
