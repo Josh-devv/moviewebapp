@@ -35,6 +35,10 @@ export default function Navbar(){
             <div className="" id="sticky">
                 <h2 className="nav-head">Josh Flix</h2>
                 <div className="types">
+                    <h6 className="pl-2 pr-4">
+                      <Link to={`/`}>Home</Link>
+                    </h6>
+                    
                     <h6 className="pl-2 pr-4">Movies</h6>
                     <h6 className="pl-2 pr-4">Genre</h6>
                     <h6 className="pl-2 pr-4">Tv Shows</h6>
@@ -69,6 +73,9 @@ export default function Navbar(){
             <div className="menu-bar">
                         <div className="types2 types">
                           <h6 className="pl-2 pr-4">
+                            <Link to={`/`}>Home</Link>
+                          </h6>
+                          <h6 className="pl-2 pr-4">
                             <Link to={`/search`}>
                               Movies
                             </Link>
@@ -80,7 +87,7 @@ export default function Navbar(){
                         <div className="search-div">
                             <div className="search2">
                                 <div className='pt-2'>
-                                  <Link to={`/home/search/${searchQuery}`} className='pl-3 pr-2'>
+                                  <Link to={`/search/${searchQuery}`} className='pl-3 pr-2'>
                                     <GoSearch size={20} color="blue"/>
                                   </Link>
                                 </div>

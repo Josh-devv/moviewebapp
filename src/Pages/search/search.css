@@ -136,3 +136,7 @@
   .label{
     padding: 20px;
   }
+  .head-app2{
+    display: flex;
+    flex-direction: row;
+  }

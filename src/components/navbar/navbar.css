@@ -154,7 +154,7 @@
     height: 100vh;
     background-color: transparent;
     width: 100%;
-    z-index: 10000;
+    z-index: 100000000000;
     padding-top: 70px;
     backdrop-filter: blur(50px);
     
