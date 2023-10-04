@@ -9,7 +9,7 @@ export default function Rated({ ratedMovies }) {
         { 
             ratedMovies.map((mov)=>(
 
-                <Link to={{pathname: `home/movie/${mov.id}`, state:{movie: mov}}} key={mov.id}>    
+                <Link to={{pathname: `/movie/${mov.id}`, state:{movie: mov}}} key={mov.id}>    
                     <div className="carou-w color-white" key={mov.id}>                                                    
                         <img src={`https://image.tmdb.org/t/p/w500${mov.poster_path}`} alt="" />
                     </div> 

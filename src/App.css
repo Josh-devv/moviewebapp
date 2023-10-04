@@ -959,7 +959,16 @@ ul li a:hover{
     height: 30vh;
   }
   .desc-img::after{
-    height: 30vh;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  
+    height: 100%;
+    z-index: 1; /* for it to appear above every other elements*/
+    background: rgba(0, 0, 0, 0);
+    box-shadow: inset 120px 100px 250px #000000;
   }
   .desc-carou{
     width: 320px;

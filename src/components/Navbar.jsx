@@ -41,7 +41,7 @@ export default function Navbar(){
 
                 <div className="search mr-5">
                   <div className='pr-1 pt-2'>
-                    <Link to={`/home/search/${searchQuery}`} className='pl-3 pr-2'>
+                    <Link to={`/search/${searchQuery}`} className='pl-3 pr-2'>
                       <GoSearch size={20} color="blue"/>
                     </Link>
                   </div>
@@ -67,7 +67,11 @@ export default function Navbar(){
             {menu &&
             <div className="menu-bar">
                         <div className="types2 types">
-                          <h6 className="pl-2 pr-4">Movies</h6>
+                          <h6 className="pl-2 pr-4">
+                            <Link to={`/search`}>
+                              Movies
+                            </Link>
+                          </h6>
                           <h6 className="pl-2 pr-4">Genre</h6>
                           <h6 className="pl-2 pr-4">Tv Shows</h6>
                         </div>  

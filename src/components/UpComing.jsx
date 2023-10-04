@@ -13,7 +13,7 @@ export default function upComing({ upComingMovies, loading }){
        <>
                 { 
                     upComingMovies.map((mov)=>(
-                        <Link to={{pathname: `home/movie/${mov.id}`}} key={mov.id}>  
+                        <Link to={{pathname: `/movie/${mov.id}`}} key={mov.id}>  
                             
                             <div className="carou-w color-white">                                                    
                                 <img src={`https://image.tmdb.org/t/p/w500${mov.poster_path}`} alt="" />

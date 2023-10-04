@@ -14,7 +14,7 @@ export default function Popular({ popularMovies }) {
     
       { 
         popularMovies.map((mov)=>(
-          <Link to={{pathname: `home/movie/${mov.id}`, state:{movie: mov}}} key={mov.id}>   
+          <Link to={{pathname: `/movie/${mov.id}`, state:{movie: mov}}} key={mov.id}>   
               {
                   loading ? (
                       <FaSpinner />                    
