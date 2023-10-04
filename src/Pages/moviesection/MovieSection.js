@@ -2,13 +2,15 @@ import React from 'react';
 import { useEffect, useState, useLayoutEffect } from 'react';
 import { AiOutlineLeft,AiOutlineRight } from "react-icons/ai";
 import swiper from 'swiper'
-import Popular from '../components/Popular'
-import Footer from '../components/Footer';
-import Rated from '../components/Rated'
-import UpComing from '../components/UpComing'
+import Popular from '../../components/popular/Popular'
+import Footer from '../../components/footer/Footer';
+import Rated from '../../components/rated/Rated'
+import UpComing from '../../components/upcoming/UpComing'
 import { Link } from 'react-router-dom'; 
 import { FaSpinner } from 'react-icons/fa';
-import Home from './Home';
+import Home from '../home/Home';
+
+import './movie.css'
 //gpgus
 export default function MovieSection(){
     

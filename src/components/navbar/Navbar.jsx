@@ -3,7 +3,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { GoSearch } from "react-icons/go";
 import { AiOutlineBars } from "react-icons/ai";
-import '../Anim/animations.css'
+import '../../Anim/animations.css'
+import './navbar.css'
 
 export default function Navbar(){
 

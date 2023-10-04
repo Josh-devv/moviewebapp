@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { IoMdStar } from "react-icons/io";
 
+import './rated.css'
+
 export default function Rated({ ratedMovies }) {
     
   return (

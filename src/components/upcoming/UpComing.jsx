@@ -3,6 +3,8 @@ import { IoMdStar } from "react-icons/io";
 
 import { Link } from "react-router-dom";
 
+import './upcoming.css'
+
 export default function upComing({ upComingMovies, loading }){
     //console.log(loadinng);
 

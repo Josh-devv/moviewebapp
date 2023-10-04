@@ -1,12 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import './App.css'
-import { WatchlistProvider } from './components/WatchList';
-import MovieSection from './Pages/MovieSection'
-import MovieDesc from './Pages/MovieDesc';
-import SearchPage from './Pages/SearchPage';
-import Navbar from './components/Navbar';
-import Home from './Pages/Home';
+import { WatchlistProvider } from './components/watchlist/WatchList';
+import MovieSection from './Pages/moviesection/MovieSection'
+import MovieDesc from './Pages/moviedesc/MovieDesc';
+import SearchPage from './Pages/search/SearchPage';
+import Navbar from './components/navbar/Navbar';
+import Home from './Pages/home/Home';
 
 function App(){
     return (

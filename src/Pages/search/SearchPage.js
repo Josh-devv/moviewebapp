@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { IoMdStar } from "react-icons/io";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
+import Footer from "../../components/footer/Footer";
 import { FaSpinner } from "react-icons/fa";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/navbar/Navbar";
+
+import './search.css'
 
 const API_URL = 'https://api.themoviedb.org/3/search/movie?api_key=543c959c84a2edaf19d168f7a042f6eb';
 

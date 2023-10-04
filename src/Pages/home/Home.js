@@ -1,6 +1,8 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import ppp from '../Assets/mobile-0819.jpg'
+import Navbar from "../../components/navbar/Navbar";
+import ppp from '../../Assets/mobile-0819.jpg'
+
+import './home.css'
 
 
 export default function Home(){
