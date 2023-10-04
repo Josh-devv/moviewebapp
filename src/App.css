@@ -39,11 +39,6 @@
 .nav-head{
   font-size: 2rem;
   letter-spacing: 0.9px;
-  background: linear-gradient(
-    90deg,
-    rgb(253, 253, 252) 0%,
-    rgba(122, 79, 44, 0)
-  );
   padding-left: 50px;
   background-clip: text;
   -webkit-background-clip: text;
@@ -539,7 +534,6 @@ html{
 .head-desc{
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
 }
 .mins{
@@ -895,6 +889,9 @@ ul li a:hover{
   display: none;
   
 }
+.ratings{
+  display: flex;
+}
 
 @media screen and (min-width:769px) {
   .types{
@@ -1120,15 +1117,72 @@ ul li a:hover{
   }
 }
 @media screen and (max-width:600px){
+  .click{
+    font-size: 12px;
+  }
+  .carou-add{
+    width: 90px;
+    height:110px;
+    margin: 0.3rem;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    background-color: rgba(253, 253, 253, 0.1);
+    border: none;
+    display: flex;
+    justify-content: center;  
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  }
+  .head-app2{
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+  }
+  .app2{
+    display: flex;
+  position: relative;
+  flex-wrap: nowrap;
+  }
+  .info{
+    width: 90px;
+    display: none;
+  }
+  .ratings{
+    display: none;
+  }
+  .carou-w{
+    width: 90px;
+    height: 110px;
+    margin-left: 0;
+  }
   .nav-head{
     font-size: 25px;
     padding-left: 20px;
   }
-  .menu{
-    
+  .head-desc{
+    display: flex;
+    justify-content: none;
+    align-items: none;
+  }
+  .desc-img{
+    position: absolute;
+    height: 100%;
+  }
+  .desc-img img{
+  height: 30vh;
+  }
+  .desc-info{
+    position: relative;
+    flex-direction: column;
+    margin-top: 150px;
   }
   .home-page{
-    height: 100vh;
+    height: 100%;
+  }
+  .dark{
+    height: 30vh;
+    background: linear-gradient(180deg, black, transparent, transparent, transparent);
   }
   .pfpf{
     
@@ -1149,8 +1203,10 @@ ul li a:hover{
   .home-page{
     padding: 0 10px;
   }
-  .genre{
+  .gen h5{
     font-size: 15px;
+    color: white;
+    z-index: 10000;
   }
   .desc-carou{
     width: 180px;
@@ -1168,6 +1224,7 @@ ul li a:hover{
   }
   .descc h1{
     font-size: 35px;
+    width: 100%;
   }
   .descc p{
     width: 100%;
@@ -1186,6 +1243,9 @@ ul li a:hover{
 }
 .descc{
   width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: relative;
 }
 .descc button{
   width: 40%;
@@ -1208,6 +1268,9 @@ ul li a:hover{
   }
   .search2 input{
     font-size: 12px;
+  }
+  .descc h1{
+    font-size: 32px
   }
   .types2 h6{
     font-size: 20px;

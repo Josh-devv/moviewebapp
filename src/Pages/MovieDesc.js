@@ -144,23 +144,20 @@ console.log(mdetails);
                             <button className="desc-button"> Watch Now</button>
                             <button className="desc-button1" onClick={handleAddToWatchlist}><HiOutlinePlus />Add to WatchList</button>
                             
-                    </div>
-                    </div>            
-                    
-                    
-                </div>
-
-                <div>
-                    <h5 className="container-fluid genre pt-5">Josh's WatchList</h5>
+                            </div>
+                </div>      
+                
+                <div className="gen">
+                    <h5 className="genre">My WatchList</h5>
                         <div className="head-app2">
-                            <div className="app2 container-fluid" >
+                            <div className="app2" >
                                 <div>
                                 <div className="carou-add color-white" onClick={handleAddToWatchlist}>                                                    
                                         
                                     
                                 </div> 
                                     <div className="" >
-                                        <span className=" pl-3">Click this to add</span>
+                                        <span className="click">Click this to add</span>
                                     </div>
                                 </div>
 
@@ -173,7 +170,7 @@ console.log(mdetails);
                     
                                             <div className="head-info" >
                                                 <span className="info pl-3">{week.title}</span>
-                                                    <div className='container-fluid ratings d-flex'>
+                                                    <div className='container-fluid ratings'>
                                                         <small className="d-flex justify-content-center align-items-center">
                                                             <IoMdStar size={20} color="yellow" />{week.vote_average}
                                                         </small>
@@ -191,7 +188,10 @@ console.log(mdetails);
                                 }
                             </div>
                         </div>
-                    </div>
+                    </div>      
+                </div>
+
+               
 
                 <div>
                     <h5 className="container-fluid genre pt-5">Weekly Rated Movies</h5>
