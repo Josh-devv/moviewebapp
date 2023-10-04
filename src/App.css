@@ -503,7 +503,6 @@ html{
 
 .desc-img{ 
   display: flex;
-  overflow: hidden;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -1124,7 +1123,6 @@ ul li a:hover{
     width: 90px;
     height:110px;
     margin: 0.3rem;
-    overflow: hidden;
     position: relative;
     border-radius: 12px;
     background-color: rgba(253, 253, 253, 0.1);
@@ -1134,10 +1132,11 @@ ul li a:hover{
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
     box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
   }
-  .head-app2{
-    overflow-x: scroll;
+  .head-app2, .gen{
+    overflow: scroll;
     width: 100%;
     display: flex;
+    flex-direction: column;
   }
   .app2{
     display: flex;
@@ -1151,10 +1150,18 @@ ul li a:hover{
   .ratings{
     display: none;
   }
-  .carou-w{
+  .carou-a{
     width: 90px;
     height: 110px;
-    margin-left: 0;
+    margin: 0.3rem;
+    position: relative;
+    border-radius: 12px;
+    background-color: rgba(253, 253, 253, 0.1);
+    border: none;
+    display: flex;
+    justify-content: center;  
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
   }
   .nav-head{
     font-size: 25px;
@@ -1211,7 +1218,6 @@ ul li a:hover{
   .desc-carou{
     width: 180px;
     display: block;
-    overflow: hidden;
     border-radius: 12px;
     border: none;
     

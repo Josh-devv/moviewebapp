@@ -147,9 +147,7 @@ console.log(mdetails);
                             </div>
                 </div>      
                 
-                    
-                </div>
-<div className="gen">
+                <div className="gen">
                     <h5 className="genre">My WatchList</h5>
                         <div className="head-app2">
                             <div className="app2" >
@@ -166,7 +164,7 @@ console.log(mdetails);
                                 {
                                     watchlist.map((week)=>(
                                         <Link to={{pathname: `/movie/${week.id}`, state:{movie: week}}} key={week.id}>    
-                                            <div className="carou-w color-white">                                                    
+                                            <div className="carou-a color-white">                                                    
                                                 <img src={`https://image.tmdb.org/t/p/w500${week.poster_path}`} alt="" />
                                             </div> 
                     
@@ -190,7 +188,9 @@ console.log(mdetails);
                                 }
                             </div>
                         </div>
-                    </div>  
+                    </div>      
+                </div>
+
                
 
                 <div>
